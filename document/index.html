@@ -39,18 +39,18 @@
 <meta property="og:site_name" content="BioT2Ex">
 <meta property="og:description" content="InroductionBioT2Ex  provides a package or toolkit to conveniently convert the tabular txt file into a well-anotated Excel file. We believe that BioT2Ex could facilitate the downstream data interpretat">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="d:/myblog/source/document/renderedgeR.png">
-<meta property="og:image" content="d:/myblog/source/document/renderDESeq2.png">
-<meta property="og:image" content="d:/myblog/source/document/renderChIPseeker.png">
-<meta property="og:image" content="d:/myblog/source/document/description.png">
-<meta property="og:image" content="d:/myblog/source/document/effect.png">
-<meta property="og:image" content="d:/myblog/source/document/head.png">
-<meta property="og:image" content="d:/myblog/source/document/color.png">
-<meta property="article:published_time" content="2021-11-28T05:13:49.699Z">
-<meta property="article:modified_time" content="2021-11-28T05:13:12.678Z">
+<meta property="og:image" content="https://lucinda315.github.io/document/renderedgeR.png">
+<meta property="og:image" content="https://lucinda315.github.io/document/renderDESeq2.png">
+<meta property="og:image" content="https://lucinda315.github.io/document/renderChIPseeker.png">
+<meta property="og:image" content="https://lucinda315.github.io/document/description.png">
+<meta property="og:image" content="https://lucinda315.github.io/document/effect.png">
+<meta property="og:image" content="https://lucinda315.github.io/document/head.png">
+<meta property="og:image" content="https://lucinda315.github.io/document/color.png">
+<meta property="article:published_time" content="2021-11-28T05:18:41.359Z">
+<meta property="article:modified_time" content="2021-11-28T05:18:26.674Z">
 <meta property="article:author" content="BioT2Ex Group">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="d:/myblog/source/document/renderedgeR.png">
+<meta name="twitter:image" content="https://lucinda315.github.io/document/renderedgeR.png">
 
 <link rel="canonical" href="https://lucinda315.github.io/document/">
 
@@ -222,43 +222,43 @@
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @param input  input data. dataframe</span></span><br><span class="line"><span class="comment"># @param orgDB  the org.xx.eg.db you need. character</span></span><br><span class="line"><span class="comment"># @param log2FC Set the log2FC value to sift data</span></span><br><span class="line"><span class="comment"># @param n The number of genes you want to choose, default is 20000.character</span></span><br><span class="line"><span class="comment"># @param showInExcel show output in Excel or not</span></span><br><span class="line">renderedgeR(input,orgDB=<span class="string">&#x27;org.Hs.eg.db&#x27;</span>,log2FC=<span class="number">1</span>,n=<span class="number">20000</span>,showInExcel=<span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Output effect:</p>
-<p><img src="D:\myblog\source\document\renderedgeR.png" alt="renderedgeR"></p>
+<p><img src="renderedgeR.png" alt="renderedgeR"></p>
 <h4 id="renderDESeq2"><a href="#renderDESeq2" class="headerlink" title="renderDESeq2"></a>renderDESeq2</h4><p>The output results were sorted in descending order according to the size of foldchange, annotations representing up-regulation or down-regulation of expression were added, geneId was added, then GO enrichment analysis was further conducted, GO number was output, and Genebank link of each gene was added. A list of table header comments is also generated in this step.</p>
 <p>The original expression difference analysis data are from the <a target="_blank" rel="noopener" href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0009317">paper</a>.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @param input  input data. dataframe</span></span><br><span class="line"><span class="comment"># @param orgDB  the org.xx.eg.db you need. character</span></span><br><span class="line"><span class="comment"># @param log2FC Set the log2FC value to sift data</span></span><br><span class="line"><span class="comment"># @param n The number of as you want to choose, default is 20000.character</span></span><br><span class="line"><span class="comment"># @param showInExcel show output in Excel or not</span></span><br><span class="line">renderDESeq2(input,orgDB=<span class="string">&#x27;org.Hs.eg.db&#x27;</span>,log2FC=<span class="number">1</span>,n=<span class="number">20000</span>,showInExcel=<span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Output effect:</p>
-<img src="D:\myblog\source\document\renderDESeq2.png" alt="renderDESeq2" style="zoom:150%;" />
+<img src="renderDESeq2.png" alt="renderDESeq2" style="zoom:150%;" />
 
 <h4 id="renderChIPseeker"><a href="#renderChIPseeker" class="headerlink" title="renderChIPseeker"></a>renderChIPseeker</h4><p>Add “ENSEMBL”,”SYMBOL”,”GENENAME” and a list of table header comments is also generated in this step.</p>
 <p>The original data is downloaded from the <a target="_blank" rel="noopener" href="https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE144195">GEO database</a>.(GSE144195_combined_peaks_with_CTCF_motif.bed.gz)</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @param input input data .dataframe</span></span><br><span class="line"><span class="comment"># @param orgDB  the org.xx.eg.db you need. character</span></span><br><span class="line"><span class="comment"># @param showInExcel show output in Excel or not</span></span><br><span class="line">renderChIPseeker(input,orgDB=<span class="string">&#x27;org.Hs.eg.db&#x27;</span>,showInExcel=<span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Output effect:</p>
-<p><img src="D:\myblog\source\document\renderChIPseeker.png" alt="renderChIPseeker"></p>
+<p><img src="renderChIPseeker.png" alt="renderChIPseeker"></p>
 <h3 id="Add-gene-description"><a href="#Add-gene-description" class="headerlink" title="Add gene description"></a>Add gene description</h3><p>A function to add  description of genes by geneId.</p>
 <h4 id="addDescription"><a href="#addDescription" class="headerlink" title="addDescription"></a>addDescription</h4><p>To use this function you need to enter the taxID of the species and the column number of geneId.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @param input input data. dataframe</span></span><br><span class="line"><span class="comment"># @param taxid  tax_id of the organism,can query by TaxIdentifier.character</span></span><br><span class="line"><span class="comment"># @param ncol  the column number of geneId</span></span><br><span class="line"><span class="comment"># @param showInExcel show output in Excel or not</span></span><br><span class="line">addDescription(input,taxid=<span class="number">9606</span>,ncol=<span class="number">9</span>,showInExcel=<span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Output effect:</p>
-<p><img src="D:\myblog\source\document\description.png" alt="description"></p>
+<p><img src="description.png" alt="description"></p>
 <h3 id="Write-the-data-into-excel"><a href="#Write-the-data-into-excel" class="headerlink" title="Write the data into excel"></a>Write the data into excel</h3><p>This function inputs the previously processed data into workbook and  name the workbook.</p>
 <h4 id="writeOut"><a href="#writeOut" class="headerlink" title="writeOut"></a>writeOut</h4><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @param input  input data .dataframe</span></span><br><span class="line"><span class="comment"># @param package  which R package outputs the data,character</span></span><br><span class="line"><span class="comment"># @param showInExcel show output in Excel or not</span></span><br><span class="line">writeOut(input,package=<span class="string">&#x27;DESeq2&#x27;</span>,showInExcel=<span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Output effect:</p>
-<p><img src="D:\myblog\source\document\effect.png" alt="effect"></p>
+<p><img src="effect.png" alt="effect"></p>
 <h3 id="Add-header-comments"><a href="#Add-header-comments" class="headerlink" title="Add header comments"></a>Add header comments</h3><p>Add header comments to the output result.</p>
 <h4 id="addHeadAnnotation"><a href="#addHeadAnnotation" class="headerlink" title="addHeadAnnotation"></a>addHeadAnnotation</h4><p>This function adds comment information to the header, either using default arguments or custom comment content.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># @param type the way to add head annotation,character</span></span><br><span class="line"><span class="comment"># @param workbook which workbook to add feature</span></span><br><span class="line"><span class="comment"># @param worksheet which worksheet to add feature,integer</span></span><br><span class="line"><span class="comment"># @param mycomments add the custom head annotation by yourself,character</span></span><br><span class="line"><span class="comment"># @param showInExcel show output in Excel or not</span></span><br><span class="line">addHeadAnnotation(type=<span class="string">&#x27;default&#x27;</span>,wbe1,worksheet=<span class="number">1</span>,showInExcel=<span class="literal">TRUE</span>)</span><br><span class="line">addHeadAnnotation(type=<span class="string">&quot;userdefine&quot;</span>,wb,worksheet=<span class="number">1</span>,mycomments=<span class="built_in">c</span>(<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>),showInExcel=<span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Output effect:</p>
-<p><img src="D:\myblog\source\document\head.png" alt="head"></p>
+<p><img src="head.png" alt="head"></p>
 <h3 id="Add-feature-to-the-excel"><a href="#Add-feature-to-the-excel" class="headerlink" title="Add feature to the excel"></a>Add feature to the excel</h3><p>This function modifies the tabular style of the output.</p>
 <h4 id="addFeature"><a href="#addFeature" class="headerlink" title="addFeature"></a>addFeature</h4><p>This function will set a uniform font size for the output results, and add a gradient representing the expression level and size for the foldchange column. Red represents up and blue represents down.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#&#x27; <span class="doctag">@param <span class="variable">input</span></span> input data .dataframe</span></span><br><span class="line"><span class="comment">#&#x27; <span class="doctag">@param <span class="variable">workbook</span></span> which workbook to add feature</span></span><br><span class="line"><span class="comment">#&#x27; <span class="doctag">@param <span class="variable">worksheet</span></span> which worksheet to add feature,integer</span></span><br><span class="line"><span class="comment">#&#x27; <span class="doctag">@param <span class="variable">colorcol</span></span> the column number of log2foldchange ,numerical</span></span><br><span class="line"><span class="comment">#&#x27; <span class="doctag">@param <span class="variable">showInExcel</span></span> show output in Excel or not</span></span><br><span class="line">addFeature(input,workbook,worksheet = <span class="number">1</span>,colorcol = <span class="number">3</span>,showInExcel = <span class="literal">TRUE</span>)</span><br></pre></td></tr></table></figure>
 
 <p>Output effect:</p>
-<p><img src="D:\myblog\source\document\color.png" alt="color"></p>
+<p><img src="color.png" alt="color"></p>
 <h3 id="Other-functions"><a href="#Other-functions" class="headerlink" title="Other functions"></a>Other functions</h3><p>These functions are included in some main function functions to further improve their effects.</p>
 <h4 id="correctNumber"><a href="#correctNumber" class="headerlink" title="correctNumber"></a>correctNumber</h4><p>This function can select the numeric column in the file and makes it displays correctly.</p>
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">as.data.frame(a)</span><br><span class="line">correctNumber(a$<span class="number">2</span>)</span><br></pre></td></tr></table></figure>
