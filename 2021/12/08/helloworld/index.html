@@ -251,6 +251,7 @@
 
           </div>
           
+    <div class="comments" id="gitalk-container"></div>
 
 
 <div id="gitment_title" class="gitment_title"></div>
@@ -447,6 +448,26 @@
   
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID    : '993cd792f87aa14aa3dc# GitHub Application Client ID',
+      clientSecret: '4d4cc835e87afbf03582b78383ae42ea3d433343# GitHub Application Client Secret',
+      repo        : 'BioT2Extalk# Repository name to store issues',
+      owner       : 'Lucinda315# GitHub repo owner',
+      admin       : ['Lucinda315# GitHub repo owner and collaborators, only these guys can initialize gitHub issues'],
+      id          : '8c3a588bd242a3281785dd5696d5ef46',
+        language: 'en',
+      distractionFreeMode: true
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+});
+</script>
 
 </body>
 </html>
