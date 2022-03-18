@@ -33,7 +33,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://lucinda315.github.io/img/facebook_cover_photo_2.png">
 <meta property="article:published_time" content="2021-12-08T12:48:43.909Z">
-<meta property="article:modified_time" content="2022-02-25T13:08:01.395Z">
+<meta property="article:modified_time" content="2022-03-18T13:24:33.949Z">
 <meta property="article:author" content="BioT2Ex Group">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://lucinda315.github.io/img/facebook_cover_photo_2.png">
@@ -208,22 +208,18 @@
       
         <p><img src="/img/facebook_cover_photo_2.png" alt="facebook_cover_photo_2"></p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Biologists and clinicians are addicted to Excel. However, most tools and software in the community prefer to output txt- or csv-formatted results. There is a gap between the well-annotated excel file and raw analysis results exported from bio-software. To address this issue, we launched the BioT2Ex project that provides a package or toolkit to conveniently convert the tabular txt file into a well-anotated Excel file. We believe this project could facilitate the downstream data interpretation of high-throughput genomic sequencing analysis.</p>
-<h2 id="Planned-features"><a href="#Planned-features" class="headerlink" title="Planned features"></a>Planned features</h2><ul>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
 <li>Convert tabulated TXT to excel</li>
-<li>Avoid wrong convertions<ul>
-<li>Prevent excel from changing texts (gene symbols, etc.) automatically into dates</li>
-<li>Distinguish the usage of , and . in decimals</li>
-<li>Automatically recognize the column names of tables and delimiter (\t or , or [space])</li>
-</ul>
-</li>
 <li>Customize software-specific results conversion to excel</li>
 <li>Highlight and annotate items in excels</li>
 <li>Build publishable tables</li>
 <li>Pipe to downstream functional analysis software</li>
+<li>Add relevant annotations</li>
 </ul>
-<h2 id="Support-softwares"><a href="#Support-softwares" class="headerlink" title="Support softwares"></a>Support softwares</h2><h3 id="Software-table"><a href="#Software-table" class="headerlink" title="Software table"></a>Software table</h3><hr>
-<p>RNAseq software | ChIPseq software | Wes data software</p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install BioT2Ex</span><br></pre></td></tr></table></figure>
+<h2 id="Support-softwares"><a href="#Support-softwares" class="headerlink" title="Support softwares"></a>Support softwares</h2><p>RNAseq software | ChIPseq software | Wes data software</p>
+<p>See the detailed tool list:<a target="_blank" rel="noopener" href="http://biot2ex.biomics.info/tools/" class="alert-link">Supported-tools page</a>.</p>
+<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>Please check the usage documents on the <a target="_blank" rel="noopener" href="http://biot2ex.biomics.info/document/" class="alert-link">Docs page</a>. </p>
+<h3 id="Quick-install"><a href="#Quick-install" class="headerlink" title="Quick install"></a>Quick install</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install BioT2Ex</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!requireNamespace(<span class="string">&quot;BiocManager&quot;</span>, quietly = <span class="literal">TRUE</span>))</span><br><span class="line">    install.packages(<span class="string">&quot;BiocManager&quot;</span>)</span><br><span class="line"></span><br><span class="line">BiocManager::install(<span class="string">&quot;BioT2Ex&quot;</span>)</span><br></pre></td></tr></table></figure>
 
@@ -298,7 +294,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Planned-features"><span class="nav-number">2.</span> <span class="nav-text">Planned features</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Support-softwares"><span class="nav-number">3.</span> <span class="nav-text">Support softwares</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Software-table"><span class="nav-number">3.1.</span> <span class="nav-text">Software table</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage"><span class="nav-number">4.</span> <span class="nav-text">Usage</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Introduction"><span class="nav-number">1.</span> <span class="nav-text">Introduction</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Features"><span class="nav-number">2.</span> <span class="nav-text">Features</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Support-softwares"><span class="nav-number">3.</span> <span class="nav-text">Support softwares</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Usage"><span class="nav-number">4.</span> <span class="nav-text">Usage</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Quick-install"><span class="nav-number">4.1.</span> <span class="nav-text">Quick install</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
