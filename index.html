@@ -204,21 +204,53 @@
       
           <p><img src="/img/facebook_cover_photo_2.png" alt="facebook_cover_photo_2"></p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Biologists and clinicians are addicted to Excel. However, most tools and software in the community prefer to output txt- or csv-formatted results. There is a gap between the well-annotated excel file and raw analysis results exported from bio-software. To address this issue, we launched the BioT2Ex project that provides a package or toolkit to conveniently convert the tabular txt file into a well-anotated Excel file. We believe this project could facilitate the downstream data interpretation of high-throughput genomic sequencing analysis.</p>
-<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
-<li>Convert tabulated TXT to excel</li>
-<li>Customize software-specific results conversion to excel</li>
-<li>Highlight and annotate items in excels</li>
-<li>Build publishable tables</li>
-<li>Pipe to downstream functional analysis software</li>
-<li>Add relevant annotations</li>
+<h2 id="What-can-this-project-do"><a href="#What-can-this-project-do" class="headerlink" title="What can this project do?"></a>What can this project do?</h2><p>1.<strong>Convert the output to a file in XLSX format</strong></p>
+<p>The output files of many analysis tools are not in XLSX format and are not easily understood. BioT2Ex can convert most analysis tool output files to XLSX format for enhanced visualization and understanding.</p>
+<p>2.<strong>Add annotations to analysis results</strong></p>
+<ul>
+<li>Add the “up-down” comment column</li>
+<li>Add gradient color to the logFC column</li>
+<li>Add ENTREZID</li>
+<li>Add GO term and GeneBank link of each gene</li>
+<li>Add gradient color to the logFC column to indicate the expression level</li>
+<li>Add statistical functions for some specific variables</li>
+<li>Add gene description</li>
+<li>Add comment information for the header</li>
 </ul>
+<h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
+<li><p>Easy to install</p>
+<p><strong>Python:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install BioT2Ex</span><br></pre></td></tr></table></figure>
+
+<p><strong>R:</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!requireNamespace(<span class="string">&quot;BiocManager&quot;</span>, quietly = <span class="literal">TRUE</span>))</span><br><span class="line">    install.packages(<span class="string">&quot;BiocManager&quot;</span>)</span><br><span class="line"></span><br><span class="line">BiocManager::install(<span class="string">&quot;BioT2Ex&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><p>Quick usage</p>
+<p><strong>Please refer to Docunments for detailed usage on the <a target="_blank" rel="noopener" href="http://biot2ex.biomics.info/document/" class="alert-link">Docs page</a>.</strong> </p>
+<p><strong>Python:</strong></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#macs</span></span><br><span class="line">Python BioT2Ex -m macs [path of the inputfile]</span><br><span class="line"><span class="comment">#MutSigCV</span></span><br><span class="line">Python BioT2Ex -m mutsigcv [path of the inputfile]</span><br><span class="line"><span class="comment">#rsem</span></span><br><span class="line">Python BioT2Ex -m rsem [path of the inputfile]</span><br></pre></td></tr></table></figure>
+
+<p><strong>R:</strong></p>
+<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#edgeR</span></span><br><span class="line">render_edgeR(input,orgDB,taxid,n,filename,showInExcel)</span><br><span class="line"><span class="comment">#DESeq2</span></span><br><span class="line">render_DESeq2(input,orgDB,taxid,filename,n,showInExcel)</span><br><span class="line"><span class="comment">#limma</span></span><br><span class="line">render_limma(input,orgDB,taxid,filename,n,showInExcel)</span><br><span class="line"><span class="comment">#NOIseq</span></span><br><span class="line">render_NOISeq(input,orgDB,taxid,filename,n,showInExcel)</span><br><span class="line"><span class="comment">#clusterProfiler</span></span><br><span class="line">render_clusterP_GO(input,filename,showInExcel)</span><br><span class="line">render_clusterP_KEGG(input,filename,showInExcel)</span><br><span class="line"><span class="comment">#ChIPseeker</span></span><br><span class="line">render_ChIPseeker(input,orgDB,taxid,filename,op)</span><br><span class="line"><span class="comment">#DiffBind</span></span><br><span class="line">render_DiffBind(input,n,filename=<span class="string">&quot;&quot;</span>,sheetname=<span class="string">&quot;&quot;</span>,taxid,showInExcel)</span><br></pre></td></tr></table></figure></li>
+<li><p>Customize software-specific results conversion to excel</p>
+</li>
+<li><p>Highlight and annotate items in excels</p>
+</li>
+<li><p>Build publishable tables</p>
+</li>
+<li><p>Pipe to downstream functional analysis software</p>
+</li>
+<li><p>Add relevant annotations</p>
+</li>
+</ul>
+<h2 id="Output-effect"><a href="#Output-effect" class="headerlink" title="Output effect"></a>Output effect</h2><p><strong>edgeR:</strong></p>
+<img src="edgeR.gif" alt="edgeR"  />
+
+<p><strong>MACS:</strong></p>
+<img src="macs.png" alt="macs" style="zoom:80%;" />
+
+
 <h2 id="Support-softwares"><a href="#Support-softwares" class="headerlink" title="Support softwares"></a>Support softwares</h2><p>RNAseq software | ChIPseq software | Wes data software</p>
 <p>See the detailed tool list:<a target="_blank" rel="noopener" href="http://biot2ex.biomics.info/tools/" class="alert-link">Supported-tools page</a>.</p>
-<h2 id="Usage"><a href="#Usage" class="headerlink" title="Usage"></a>Usage</h2><p>Please check the usage documents on the <a target="_blank" rel="noopener" href="http://biot2ex.biomics.info/document/" class="alert-link">Docs page</a>. </p>
-<h3 id="Quick-install"><a href="#Quick-install" class="headerlink" title="Quick install"></a>Quick install</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install BioT2Ex</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (!requireNamespace(<span class="string">&quot;BiocManager&quot;</span>, quietly = <span class="literal">TRUE</span>))</span><br><span class="line">    install.packages(<span class="string">&quot;BiocManager&quot;</span>)</span><br><span class="line"></span><br><span class="line">BiocManager::install(<span class="string">&quot;BioT2Ex&quot;</span>)</span><br></pre></td></tr></table></figure>
-
 
       
     </div>
