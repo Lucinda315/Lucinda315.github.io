@@ -202,7 +202,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p><img src="/img/facebook_cover_photo_2.png" alt="facebook_cover_photo_2"></p>
+          <p><img src="/img/biologo.png" alt="biologo"></p>
 <h2 id="Introduction"><a href="#Introduction" class="headerlink" title="Introduction"></a>Introduction</h2><p>Biologists and clinicians are addicted to Excel. However, most tools and software in the community prefer to output txt- or csv-formatted results. There is a gap between the well-annotated excel file and raw analysis results exported from bio-software. To address this issue, we launched the BioT2Ex project that provides a package or toolkit to conveniently convert the tabular txt file into a well-anotated Excel file. We believe this project could facilitate the downstream data interpretation of high-throughput genomic sequencing analysis.</p>
 <h2 id="What-can-this-project-do"><a href="#What-can-this-project-do" class="headerlink" title="What can this project do?"></a>What can this project do?</h2><p>1.<strong>Convert the output to a file in XLSX format</strong></p>
 <p>The output files of many analysis tools are not in XLSX format and are not easily understood. BioT2Ex can convert most analysis tool output files to XLSX format for enhanced visualization and understanding.</p>
@@ -216,6 +216,7 @@
 <li>Add statistical functions for some specific variables</li>
 <li>Add gene description</li>
 <li>Add comment information for the header</li>
+<li>Make the numbers appear in the correct format</li>
 </ul>
 <h2 id="Features"><a href="#Features" class="headerlink" title="Features"></a>Features</h2><ul>
 <li><p>Easy to install</p>
@@ -425,25 +426,6 @@
 
 
 
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
-
-<script>
-NexT.utils.loadComments(document.querySelector('#gitalk-container'), () => {
-  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
-    var gitalk = new Gitalk({
-      clientID    : '993cd792f87aa14aa3dc',
-      clientSecret: '4d4cc835e87afbf03582b78383ae42ea3d433343',
-      repo        : 'BioT2Extalk',
-      owner       : 'Lucinda315',
-      admin       : ['Lucinda315'],
-      id          : 'decodeURI',
-        language: 'en',
-      distractionFreeMode: true
-    });
-    gitalk.render('gitalk-container');
-  }, window.Gitalk);
-});
-</script>
 
   
 
